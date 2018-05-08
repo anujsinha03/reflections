@@ -5,5 +5,11 @@ A. I will use remote repository to allow multiple users to work on my files coll
 Q. Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 A. Because there might be a chance that the local repository have different names of different branches and we want to add the updates to the specific branches
    which may change every time. Along with that, it is no necessary that the head is checked out to the master branch.
+
+Q. Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A. forks will clone a user public repository to the other user repository in the github itself. Clones will copy a user reposiroty from one place to other like
+   github to local directory or from one local directory to the another local directory. Branches refer to the multiple versions of a source file with in each 
+   branch, there are sume updates which will not affect the main code or the master branch.
+
    
 
