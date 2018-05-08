@@ -1,0 +1,47 @@
+Q. What happens when you initialize a repository? Why do you need to do it?
+A. It creates an empty repository of git with no initial commits in it. One would need that to perform various commits for the version control of our files.
+
+Q. How is the staging area different from the working directory and the repository? What value do you think it offers?
+A. Staging area is the preparation area for files to be committed. Only files in this area are going to be included in the commit executed next time. 
+   It helps to divide changes in the working directory into several commits, each of which consists of a group of changes that represent a logical change to the 
+   relevant files.
+
+Q. How can you use the staging area to make sure you have one commit per logical change?
+A. By including only those file in staging area where a logic change or a new feature has been introduced and those files got updated because of that.
+   Only those files should be placed in staging area and should be committed hence not just taking snap shot of whole directory but only the files in 
+   staging area.
+   
+Q. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A. One when want to apply some expermental and new features to the project but may also want to take care to fix the bugs in the previous version, 
+   one can use to branching to apply updates and changes in the branch name and combine it to the master branch in the later stages. In this way, one can 
+   make updates both on the master branch along with the new bt=rnch and checkout the at any time.
+   
+Q. How do the diagrams help you visualize the branch structure?
+A. The diagrams will help to visualize the branches and the commit where the branches occurs thus keep tracking of the branches along with the master and will
+   also help to understand the whole workflow of the project.
+   
+Q. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A. The new file will be the result and updation of noth files with respect to the original file before the sepration of the branches. We represent in a
+   to get the better understanding of the parents and the rechabiltity form the head commits of a branch to the other previous commits.
+   
+Q. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A. Automatic merging saves a lot of time compared to doing merges manually. 
+
+
+Commands:
+
+git add  |    Add a file to the staging area
+git commit  |    Commit the files from the staging area to the repository 
+git status  |    Show which files are in the staging area, and which files from the working directory are not part of the repository    
+git diff  |    Git diff without arguments is comparing the working directory with the staging area
+git diff --staged  |    Compare the staging area with the repository
+git reset --hard  |    Undo all changes! There is no rollback for this, so be carefull!
+git checkout master  |    Restore the "Head" to the latest check-in (this will be part of a later lesson/module)
+git log --graph --oneline <branch1> <branch2>  |    Show a visual representation of the commit history within different branches
+git checkout -b new_branch_name  |    Creates a new branch and do a checkout on this branch in one call instead of git branch new_branch_name and git checkout new_branch_name
+git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
+git branch -d name  |    Remove the branch with the specified name
+git show commitId  |    Show the changes made in this commit compared to the previous version. This is working even after merging.
+
+   
+   
