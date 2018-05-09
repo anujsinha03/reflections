@@ -1,0 +1,15 @@
+Step1: $git remote add upstream https://github.com/udacity/create-your-own-adventure.git
+
+Step2: $ git remote
+origin
+upstream
+
+Step3: $ git pull upstream master
+
+Step4: $git checkout Bhagat-ref //checkout change branch
+
+Step5: $ git merge upstream/master
+
+Step6: $ git push origin Bhagat-ref //push your change branch to your fork
+
+Step7: Put a pull request to the original manager of the file.
