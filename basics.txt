@@ -1,0 +1,136 @@
+##Learning GIT --> from udacity.com
+
+##Version spaces and Lectures for git learning by maintaining different versions of a file.
+
+#To compare 2 files:
+	In windows command prompt: use FC filename1.ext filename2.ext in a home directory for the two files.
+
+	In unix/ mac : use diff -u filename1.ext filename2.ext where u stands for unified diff format
+
+#To update and create directories in bash
+	cd ~                          # change directories to your home directory
+	mkdir version-control         # make version-control directory
+	cd version-control            # go to version-control directory
+	mkdir reflections             # create reflections directory
+	cd reflections                # go to reflections directory
+	subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt 
+	
+#You can replace subl with another editor here if you prefer a different one
+
+	dir "C:/Program\ Files/Notepad++/notepad++.exe" #use can use any of your favourite editors by defining it path, 1st by checking it.
+
+	echo 'alias npp="C:/Program\ Files/Notepad++/notepad++.exe"' >> ~/.bashrc   #"a\ b" represent space between the a and b
+
+	git config --global core.editor "C:/Program\ Files/Notepad++/notepad++.exe"
+
+	#Close and reopen git bash
+	go to the file directory
+	npp lesson_1_reflections.txt
+
+
+#When do you want to save the version of your files:
+	Whenever a large enough change is made
+	Whenever there is a long pause in editing
+	Whenever you choose to save a version
+
+#Version Control has a part like Git, SVN, google docs, dropbox, wikipedia etc.
+
+#Commit is a component of a GIT
+	commit structure
+	commit ID
+	Author Name
+	Date Created
+	Commit Logical Message
+
+#get all commit logs
+	$ git log
+	----
+	----
+	$ git diff commitIDx commitIDy
+	commitY is the new one, commitX is the old one commit
+#always use buggy commit as a second parameter of git diff to get comparision between old one and the buggy one!!
+
+#diff operates on commit
+#use each commit for a single logical change, keep monitor of the size of commit. They should not be even too long or even too short.
+
+#To get stats ober a commit snapshot of multiple files
+	git log --stat //give you the number of edits of the code lines
+	git log commitID --stat //give the edits and operations from that ID onwards
+	git clone #url
+	git checkout commitID //to reverting commit head to that ID and in git log, it will be shown as the recent commit.
+
+	ls -a command to view hidden files too
+
+#When you initialize the repository,Git doesn’t create any commits for you. You’ll have to create the first commit yourself.
+
+	>To intitate a git repository in a given dir, use command 'git init'
+
+	$git status  //shows which files has changed since last commit
+
+	> We use file in the staging area before sending it to git repo as we will commit only those files that are in staging area.
+	$git add abc.txt
+	$git status
+	$git commit
+
+	> git diff will compare files between working directory and staged workspace
+	>git diff --staged will compare files between recent commit and staged workspace.
+
+#In order to create a branch
+	git branch branch_name //will create a branch name branch_name attached to the master branch
+	git checkout branch_name //to invoke branch_name branch
+	//edit a file
+	git add file_name //added file to the staging area
+	git commit -m
+	git status //to check the status of the branch
+	git log //to see your commit ID
+
+	To see the visual representation of the commit history is
+	git log --graph --oneline branch1 branch2 ..
+
+#A note about git merge
+	git merge will also include the currently checked-out branch in the merged version. So if you have branch1 checked out,
+	you run git merge branch2 branch3,
+	the merged version will combine branch1 as well as branch2 and branch3. 
+	That’s because the branch1 label will update after you make the merge commit, so it’s unlikely that you didn’t want the changes from branch1 included 
+	in the merge. For this reason, you should always checkout one of the two branches you’re 
+	planning on merging before doing the merge. Which one you should check out depends on which branch label you want to point to the new commit.
+
+	Since the checked-out branch is always included in the merge, you may have guessed that when you are merging two branches, you don't need to specify both of 
+	them as arguments to git merge on the command line. 
+	If you want to merge branch2 into branch1, you can simply git checkout branch1 and then type git merge branch2. 
+	The only reason to type git merge branch1 branch2 is if it helps you keep better mental track of which branches you are merging.
+	Also, since the two branches are merged, the order in which they are typed into the command line does not matter. 
+	The key is to remember that git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch.
+
+#Merge conflict
+	If you get a message like this
+	Auto-merging game.js
+	CONFLICT (content): Merge conflict in game.js
+	Automatic merge failed; fix conflicts and then commit the result. Then your files were not in the same state as Caroline's when you started the merge. 
+
+#To fix this, complete the following steps:
+	use npp file name to open it.
+	search for >>>abc text and under that, compare that verion with ====== lines, to check what the conflict updates are.
+	Remove and update the value accordingly to that.
+	Add the updated conflict files to the staging area.
+	Use git status to get the status of conflict under merge operation.
+
+#Merge conflict (Newline characters between Windows and Unix systems)
+	Context: Whenever we hit the "Enter" key on the keyboard, we are actually telling the computer to insert an invisible character into our text file to
+	indicate to the computer that there should be a new line. Unix systems adds one character called the "line feed" character or LF or \n while 
+	Windows systems adds two characters, "carriage return" and "line feed" or CRLF or \r\n.
+
+	To fix this, Windows users should set the global autocrlf attribute to true: git config --global core.autocrlf true. More information can be found here: 
+	https://help.github.com/articles/dealing-with-line-endings/#platform-all
+
+#Comparing a commit to its parent
+	The command Caroline mentions to compare a commit to its parent is 
+	git show commit_id
+	
+#To delete the n commits from the head
+	$git reset --hard HEAD~n //n can be 1,2,3
+
+#Use git log -n1 to get recent log status
+
+
+
