@@ -19,3 +19,7 @@ Q. How would you collaborate without using Git or GitHub? What would be easier, 
 A. It will surely going to very hard to collaborate as there will always exist some conflicts and onne have to go through the whole code files to 
    check the update. Even knowing the update lines, merging them and working independently on them will also surely going to be one hell of a hectic task to
    perform for a developer. 
+   
+Q. When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+A. Whenever I want to include new changes unkonowing the fact that other may also be working on the same lines of code, it is better to do it in a seprate
+   branches and get them communicated between users, after convincing over them, one can merge the branches to the master after resolving merging conflict.
