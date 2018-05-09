@@ -11,5 +11,7 @@ A. forks will clone a user public repository to the other user repository in the
    github to local directory or from one local directory to the another local directory. Branches refer to the multiple versions of a source file with in each 
    branch, there are sume updates which will not affect the main code or the master branch.
 
+Q. What is the benefit of having a copy of the last known state of the remote stored locally?
+A. On having a copy of last known of remote, one can fetch the changes in remote and add it easily to the local directory by updating remote master and 
+   merging it to master which will sort the collaboration conflict of remote and local.
    
-
