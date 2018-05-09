@@ -14,4 +14,8 @@ A. forks will clone a user public repository to the other user repository in the
 Q. What is the benefit of having a copy of the last known state of the remote stored locally?
 A. On having a copy of last known of remote, one can fetch the changes in remote and add it easily to the local directory by updating remote master and 
    merging it to master which will sort the collaboration conflict of remote and local.
-   
+
+Q. How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+A. It will surely going to very hard to collaborate as there will always exist some conflicts and onne have to go through the whole code files to 
+   check the update. Even knowing the update lines, merging them and working independently on them will also surely going to be one hell of a hectic task to
+   perform for a developer. 
