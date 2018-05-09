@@ -3,10 +3,23 @@ A. By looking at the previous versions, one can compare them for the changes bet
 
 Q. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, 
    like Google Docs does?
-A. pros are that one can commit the same kind of logical change at once but cons can be that the individual is working over a week for adding a new feature and 
-   commiting after a week is too big to commit, instead one should divide the add-on feature into multiple logical features and commit them frequently.
+A. pros are that one can commit the same kind of logical change at once but cons can be that when one should commit i.e the individual is working over a week for
+ adding a new feature and commiting after a week is too big to commit, instead one should divide the add-on feature into multiple logical features and commit 
+ them frequently.
 
 Q. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
 A. Git allows to tracking of multiple files by taking snapshots of the updates in all the files present in a repo in a togather manner whereas Google docs
    maintains the changes in the different files in a seprate manner.
+   
+Q. How can you use the commands git log and git diff to view the history of files?
+A. git log will give all the previous commits done on that file where a git diff will give the difference in code lines between two commit IDs.
+
+Q. How might using version control make you more confident to make changes that could break something?
+A. As the previous commit versions of code is all maintained by git, breaking the code will no longer to be feared as one can checkout the previous 
+   version of code easily.
+   
+Q. Now that you have your workspace set up, what do you want to try using Git for?
+A. I want to try to use git to make commits and push the updates in the public repositories in my public git account.
+
+
    
